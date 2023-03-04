@@ -1,0 +1,5 @@
+.ng-invalid:not(form){
+
+    border-top: 5px solid #ff0000 ;
+
+}

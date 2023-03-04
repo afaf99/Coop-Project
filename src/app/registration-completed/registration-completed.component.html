@@ -1,0 +1,35 @@
+<html>
+<body>
+
+
+    <br>
+    <div class="container mt-4 p-5 text-white rounded  ">
+        <div style="background: #958a5f">
+            <div class="container">
+                <br><br>
+                <H1 class="text-center">Thank you</H1><br>
+                <h4 class="text-center">Your registration has been completed, and we wish you all the best.</h4>
+            </div>
+
+            <br>
+            <div class="container">
+                <h4 class="text-center">To check your reselt click here <br><br></h4>
+                <div class="col-md-12 text-center">
+                    <button (click)="getYourReseltWithParameter()" class="btn btn-success">Get Your Reselt</button>
+                </div>
+
+                <div class="container" *ngIf="ResultMessageFromService">
+                    <h2 class="text-center">Your Result is: </h2>
+                    <div class="h-100 d-flex align-items-center justify-content-center text-center">
+                    <div style="background:#a3a3a1 ; width: 10rem; ">In process</div>
+                    </div>
+                    <!-- {{ResultMessageFromService}} -->
+                </div>
+            </div>
+            <br>
+            <br>
+        </div>
+    </div>
+
+</body>
+</html>

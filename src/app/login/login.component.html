@@ -1,0 +1,37 @@
+<br><br>
+<html>
+<body>
+    <div class="container mt-6 p-2 text-white rounded ">
+        <div style="background: #958a5f">
+
+            <div class="alert alert-danger" *ngIf="invalidLogin">{{errorMessage}}</div>
+            <br><br>
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-8">
+                    <h2 class="fw-bold mb-5">Log in</h2>
+
+                    <form (ngSubmit)="loginHandler" #LoginForm="ngForm">
+
+                        <fieldset class="form-group">
+                            <label>User Name</label>
+                            <input type="text" name="username" [(ngModel)]="username" class="form-control"
+                                required="required">
+                        </fieldset>
+
+                        <fieldset class="form-group">
+                            <label>Password</label>
+                            <input type="password" name="password" [(ngModel)]="password" class="form-control"
+                                required="required">
+                        </fieldset>
+
+                        <br>
+                        <button (click)="loginHandler()" class="btn btn-success">Login</button>
+                    </form>
+
+                </div>
+            </div>
+            <br><br>
+        </div>
+    </div>
+</body>
+</html>

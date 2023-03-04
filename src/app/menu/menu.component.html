@@ -1,0 +1,29 @@
+<header>
+
+    <nav class="navbar navbar-expand-md navbar-dark" style="background-color:#ffffff;">
+
+
+        <ul class="navbar-nav">
+            <div><a class="navbar-brand" href="#"><img src="assets/vision.png" alt="_"></a></div>
+        </ul>
+
+        <ul class="navbar-nav navbar-collapse justify-content-end">
+            <div><a class="navbar-brand" href="#"><img src="assets/logo.png" alt="_"></a></div>
+        </ul>
+    </nav>
+    <nav class="navbar navbar-expand-md navbar-dark" style="background-color:#198754;">
+
+        <ul class="navbar-nav">
+            <li><a routerLink="/Home" class="nav-link">Home</a></li>
+            <li><a *ngIf=this.jwtAuth.isUserLogged() routerLink="/TrainingRegistration"
+                    class="nav-link">Training Registration</a></li>
+            <li><a *ngIf="!this.jwtAuth.isUserLogged()" routerLink="/Login"
+                    class="nav-link">Login</a></li>
+            <li><a *ngIf="this.jwtAuth.isUserLogged()" routerLink="/Logout"
+                    class="nav-link">Logout</a></li>
+            <li><a routerLink="/SignUp" class="nav-link">SignUp</a></li>
+        </ul>
+    </nav>
+
+
+</header>

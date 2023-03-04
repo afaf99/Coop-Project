@@ -1,0 +1,104 @@
+<html>
+
+<body>
+  <form  (ngSubmit)="TRForm.invalid" #TRForm="ngForm">
+    <div class="container mt-6 p-2 text-white rounded ">
+      <div style="background: #958a5f"> <br> <br>
+        <div class="row d-flex justify-content-center">
+          <div class="col-sm-8">
+
+              <!-- <form [formGroup]="form" (ngSubmit)="submit()">
+
+            <select class="form-select mt-3" [(ngModel)]="selectedHospital" required="required">
+                  <option *ngFor="let hospital of hospitals ">
+                    {{hospital.name}}
+                  </option>
+                </select> 
+
+            <div class="row">
+              <div class="container mt-5">
+            <div class="form-group">
+              <label for="hospital">Choose one of the hospitals for training:</label>
+              <select formControlName="hospital" class="form-control">
+                  <option>Select hospital</option>
+                  <option *ngFor="let hospitals of hospitalsList" [value]="hospitals.id">{{hospitals.name}}</option>
+              </select>
+            </div> -->
+            
+              <div class="row">
+              <form [formGroup]="trainingForm">
+                <div class="container mt-5">
+                  <label for="hospitals">Choose one of the hospitals for training: </label>
+                  
+                    <select formControlName="hospital">
+                      <option [ngValue]="null" >Select hospital</option>
+                      <option *ngFor="let hospital of hospitals" [ngValue]="hospital.id">{{hospital.name}}</option>
+                    </select>
+                  
+                  
+
+                  <!-- 
+                 <select class="form-select mt-3" required="required">
+                  <option value="1">Maternity and children's hospital</option> <br>
+                  <option value="2">Al-Amal mental health complex</option><br>
+                  <option value="3">General Hospital</option><br>
+                </select> -->
+                </div>
+              </form>
+                <div class="col-md-6 mb-4">
+                  <!--Full Name-->
+                  <div class="form-outline">
+                    <label class="form-label" for="fname">Full name</label>
+                    <input type="text" name="fname" [(ngModel)]="fname" class="form-control" required="required" />
+                  </div>
+                </div>
+                <!-- University -->
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline">
+                    <label class="form-label" for="uniy">University</label>
+                    <input type="text" name="uniy" [(ngModel)]="uniy" class="form-control" required="required" />
+                  </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                  <!-- Major -->
+                  <div class="form-outline">
+                    <label class="form-label" for="major">Major</label>
+                    <input type="text" name="major" [(ngModel)]="major" class="form-control" required="required" />
+                  </div>
+                </div>
+                <!-- GPA -->
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline">
+                    <label class="form-label" for="gpa">GPA</label>
+                    <input type="number" name="gpa" [(ngModel)]="gpa" class="form-control" required="required" />
+                  </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                  <!-- Phone Number-->
+                  <div class="form-outline">
+                    <label class="form-label" for="phone">Phone Number</label>
+                    <input type="text" name="phone" [(ngModel)]="phone" class="form-control" required="required" />
+                  </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                  <!-- Duration of training-->
+                  <div class="form-outline">
+                    <label class="form-label" for="dot">Duration of training</label>
+                    <input type="text" name="dot" [(ngModel)]="dot" class="form-control" required="required" />
+                  </div>
+                </div>
+                <br>
+                <button (click)="submit()" class="btn btn-success" [disabled]="TRForm.invalid">Apply</button>
+
+              </div>
+
+              <br><br><br>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+
+</body>
+
+</html>
